@@ -2,17 +2,27 @@
 
 Tesla vehicles are the safest passenger cars on the road. Examples of Tesla vehicles saving lives are endless. The following is a list of observations from edge cases, compiled in order to help accelerate (1) Autopilot's (FSD) learning rate, transition to (2) autonomous hands-free driving and (3) sustainable future.
 
-## Version: v10.2 2021.32.22 | 9e064485d2bf
+## Version: v10.2 | 2021.32.22 | 9e064485d2bf
 - Missing right-hand road bend/turn, crossing double yellow, driving into
 opposite direction traffic (WWD). 10 mph below speed limit. Head-on collision risk. Video: [fsd-feedback-missing-right-hand-bend-turn-into-head-on-traffic-20211030](https://drive.google.com/file/d/1zri_t-O--2HW6iV5zJDEdIgkm9PQMVmX/view?usp=sharing)
--
+- Aggressive braking due to phantom object overhead. Video: [fsd-feedback-aggressive-braking-due-phantom-overhead-object-20211030](https://drive.google.com/file/d/1CqrM2tUVQ4d4WU_Mgo8-wF1PwEZVWubj/view?usp=sharing)
+- Fails to follow user input to change into the left lane (most likely due to "Autosteer unavailable") to give space to roadworks vehicle. Driver has to disengage Autopilot to go into left lane. Video: [fsd-feedback-fails-to-change-into-left-lane-user-input-due-to-roadworks-20211030](https://drive.google.com/file/d/1zl-mkkw13drnrQggz_-wAWzvX6nbBwuP/view?usp=sharing)
+- Autopilot cancels lane-change maneuver into the middle lane, mistakenly        
+thinking semi is in the middle lane, whereas semi was in the rightmost (3) lane. Video: [fsd-feedback-lane-change-cancelled-due-phantom-semi-from-third-lane-20211030](https://drive.google.com/file/d/1glnUXSi4xTUQtIkEU039a3-E3964nAsN/view?usp=sharing)
+- Fails to recognize deer starting to walk into the lane. No slow down. Left adjustment was done by the driver. Video: [fsd-feedback-fails-to-recognize-deer-no-slow-down-20211030](https://drive.google.com/file/d/1o_ETlE72CnSY0zX0Ngtv7smtcCVxqndE/view?usp=sharing)
+- Right hand lane merge lead to sinusoidal swerving back and forward. Too many adjustments for comfort. Video: [fsd-feedback-right-lane-merge-sinusoidal-swerving-20211030](https://drive.google.com/file/d/1CBD9WLeziow0gWurh927hvupe31rUYrY/view?usp=sharing)
+- Intermittent hesitant unnecessary braking (0.5-1 sec) near flashing sign.
+Appears to misread the flashing sign for the intersection before deciding to proceed. Video: [fsd-feedback-Intermittent-unnecessary-braking-flashing-sign-no-intersection-20211030](https://drive.google.com/file/d/1rZr9uKeCOARSs3C87yAmvKcn3VFH9lDb/view?usp=sharing)
+- While safe, doesn't appear to recognize a vehicle crossing the road ahead in advance -
+too close to be comfortable for an average driver. Video: [fsd-feedback-doesnt-recognize-crossing-vehile-not-comfortable-20211030](https://drive.google.com/file/d/1pr35pLfevbuPgPikkH51IsXvEgj733T4/view?usp=sharing)
+- Doesn't anticipate semi's maneuver into passing lane in advance, starts braking aggressively too late to be considered comfortable or in control for the driver not to intervene. When user intervenes, autopilot disables and penalizes the safety score with aggressive braking / close-following. Video: [fsd-feedback-no-planning-ahead-misses-semis-maneuver-20211030](https://drive.google.com/file/d/1SfOx2UpdYb-khpRQXT2BWIFu_b28PQcq/view?usp=sharing)
 
-## Versions: 2021.12.25.7 | 30c3ea0e44d0; 2021.4.18.2 | 6c676ce09ea5
+## Versions: v10.2 | 2021.12.25.7 | 30c3ea0e44d0; 2021.4.18.2 | 6c676ce09ea5
 - Auto lane change unavailable and inconsistent engagement. Video: [fsd-feedback-auto-lane-change-unavailable-inconsistent-engagement-20210807](https://drive.google.com/file/d/1-ChJZ_Iwf7BCbOYVknxzOrsTPscOnjHL/view?usp=sharing)
 - Maps navigation - north vs south - incorrect direction. Video:
 [fsd-feedback-maps-navigation-inverse-heading-north-south-20210807](https://drive.google.com/file/d/1XGTeO4Gmc-CQGrlmv_9cyf7_VB_4sfwJ/view?usp=sharing)
 
-## Version: 2021.4.18.2 | 6c676ce09ea5
+## Version: v10.2 | 2021.4.18.2 | 6c676ce09ea5
 - Winding road interventions due to road bounds. Video: [fsd-feedback-winding-road-interventions-road-bounds-20210801](https://drive.google.com/file/d/1ChIpC4O7NgUM2kqiz6o3fQJfRdbPeioF/view?usp=sharing )
 - Disengagements and user interventions. Video: [fsd-feedback-disengagement-and-user-intervention-20210801](https://drive.google.com/file/d/1hQlAgi1z3SIGhqU9DkiUUTGUtXrHYUUH/view?usp=sharing)
 - Unnecessary maneuvers. Video: [fsd-feedback-unnecessary-maneuvers-20210801](https://drive.google.com/file/d/1PMRsQK1EqL6UwpFkqpjMYT2rYJk4GkGT/view?usp=sharing)
@@ -20,7 +30,7 @@ opposite direction traffic (WWD). 10 mph below speed limit. Head-on collision ri
 - Stuck in the middle lane and unnecessary slow downs. Video: [fsd-feedback-stuck-in-middle-lane-slow-down-20210801](https://drive.google.com/file/d/19nzf_GNELlJEvtYL7yNBTdLMaIh3QKNn/view?usp=sharing)
 - Stuck in the left lane. Video: [fsd-feedback-stuck-in-left-lane-20210801](https://drive.google.com/file/d/1FKu0knX925LQHg13uHSkmHtlmFRmB_7h/view?usp=sharing)
 
-## Version 2021.4.18.2 6c676ce09ea5
+## Version: v10.2 |  2021.4.18.2 6c676ce09ea5
 - Missing speed limits [fsd-feedback-braking-and-speed-limits-20210730](https://drive.google.com/file/d/16wIeCw0b9fqogxZ7TNCWp0MSTm3QGueG/view?usp=sharing):
     - Nighttime speed limit sign above road
     - Toll road (75 mph) vs parallel road (55 mph) 
