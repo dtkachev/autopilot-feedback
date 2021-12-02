@@ -1,6 +1,24 @@
 # Feedback
 
 Tesla vehicles are the safest passenger cars on the road. Examples of Tesla vehicles saving lives are endless. The following is a list of observations from edge cases, compiled in order to help accelerate (1) Autopilot's (FSD) learning rate, transition to (2) autonomous hands-free driving and (3) sustainable future.
+## Version: FSD Beta v10.5 | 2021.36.8.8 |  3dea54806bfc
+- Misreads end of lane. Proceeds forward in the striped zone of opposing traffic (yellow crosshatch lines). Head-on-collision risk. User intervention performs lane change to the right. Shall anticipate the end of the turning lane and switch in advance.
+Video: [fsd-b-feedback-misreads-end-of-lane-proceeds-in-opposing-traffic-crosshatch-lines-head-on-collision-risk](https://drive.google.com/file/d/1_k7YXTQX_3obgDeqdi1FTGk2GgdMpoNR/view?usp=sharing)
+- Misreads lane split. Attempts off-road lane-change into the right shoulder.
+User intervention stopped the maneuver.
+Video: [fsd-b-feedback-misreads-lane-split-attempts-off-road-lane-change-into-right-shoulder-dangerous](https://drive.google.com/file/d/1oIHE-woKOUIFLnoajdqlw661SWkANyZc/view?usp=sharing)
+- Missed lane change maneuver. Got stuck in the off ramp lane. User's intervention required for the left lane change.
+Video: [fsd-b-feedback-missed-left-lane-change-got-stuck-in-off-ramp-lane](https://drive.google.com/file/d/1-NtYQwnu9Lrcq07e39kzNy-kMKl8nhft/view?usp=sharing)
+- Gets stuck in between two lanes. Enough space to proceed on the left. User intervention proceeds the vehicle forward in the left turning lane.
+Video: [fsd-b-feedback-stuck-between-two-lanes-enough-space-to-proceed](https://drive.google.com/file/d/1oWwwQbsiA1dVWTEGaGN3dorOjlfUQZ-8/view?usp=sharing)
+- Stuck in the left lane. No reason to stay in the passing lane. Right lane open.
+Shall change and proceed in the right lane.
+Video: [fsd-b-feedback-stuck-left-lane-right-lane-open](https://drive.google.com/file/d/1zF0z_xU_p8sxJSL0QzRLvYwl9-7O0GMb/view?usp=sharing)
+- Stuck in the left lane/side of the unmarked two lanes. Prevents vehicles from passing.
+Video: [fsd-b-feedback-stuck-left-lane-of-unmarked-two-lane](https://drive.google.com/file/d/1gstcsXduRySWjir3pkav1rJ64cBgK3UP/view?usp=sharing)
+
+- Constantly tries to change into the left lane every 7-10 seconds despite user's "Cancel" input even though current lane is wide open and there are multiple vehicles in the left lane. Not learning from user input - multiple Cancel taps.
+Video: [fsd-b-feedback-tries-to-change-into-left-passing-late-despite-user-cancel-taps](https://drive.google.com/file/d/1OkNPlcw-0aOBhxIe8D5fuyTncqvqZUfj/view?usp=sharing)
 
 ## Version: v10.2 | 2021.32.22 | 9e064485d2bf
 - Missing right-hand road bend/turn, crossing double yellow, driving into
