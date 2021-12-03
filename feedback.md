@@ -2,6 +2,10 @@
 
 Tesla vehicles are the safest passenger cars on the road. Examples of Tesla vehicles saving lives are endless. The following is a list of observations from edge cases, compiled in order to help accelerate (1) Autopilot's (FSD) learning rate, transition to (2) autonomous hands-free driving and (3) sustainable future.
 ## Version: FSD Beta v10.5 | 2021.36.8.8 |  3dea54806bfc
+- Didn't complete the turn necessary to avoid the curb. Without user intervention most likely would have jumped the curb. That curb had clearly seen prior jumpers missing the turn in similar fashion.
+Video: [fsd-b-feedback-didnt-complete-the-turn-to-avoid-jumping-the-curb](https://drive.google.com/file/d/1LO8dtp-kdlNpkjwNN8EmuJCtxoO6wwdz/view?usp=sharing)
+- [1] Didn't adjust the route/path for parked vehicle in advance for a human driver to be "comfortable" to avoid disengagement. [2] Incorrectly performed "Emergency lane correction" back closer towards the high-risk zone of the parked truck after driver disengaged FSD and adjusted the route to account for the parked truck. Safety mechanism counteracted proper user correction.
+Video: [fsd-b-feedback-1-didnt-adjust-to-avoid-parked-vehicle-2-incorrectly-performed-emergency-lane-correction-into-parked-vehicle](https://drive.google.com/file/d/11Cicwl1Q4pURigGrIKXdymH_BGU0VIFp/view?usp=sharing)
 - Misreads end of lane. Proceeds forward in the striped zone of opposing traffic (yellow crosshatch lines). Head-on-collision risk. User intervention performs lane change to the right. Shall anticipate the end of the turning lane and switch in advance.
 Video: [fsd-b-feedback-misreads-end-of-lane-proceeds-in-opposing-traffic-crosshatch-lines-head-on-collision-risk](https://drive.google.com/file/d/1_k7YXTQX_3obgDeqdi1FTGk2GgdMpoNR/view?usp=sharing)
 - Misreads lane split. Attempts off-road lane-change into the right shoulder.
@@ -16,10 +20,12 @@ Shall change and proceed in the right lane.
 Video: [fsd-b-feedback-stuck-left-lane-right-lane-open](https://drive.google.com/file/d/1zF0z_xU_p8sxJSL0QzRLvYwl9-7O0GMb/view?usp=sharing)
 - Stuck in the left lane/side of the unmarked two lanes. Prevents vehicles from passing.
 Video: [fsd-b-feedback-stuck-left-lane-of-unmarked-two-lane](https://drive.google.com/file/d/1gstcsXduRySWjir3pkav1rJ64cBgK3UP/view?usp=sharing)
-
 - Constantly tries to change into the left lane every 7-10 seconds despite user's "Cancel" input even though current lane is wide open and there are multiple vehicles in the left lane. Not learning from user input - multiple Cancel taps.
 Video: [fsd-b-feedback-tries-to-change-into-left-passing-late-despite-user-cancel-taps](https://drive.google.com/file/d/1OkNPlcw-0aOBhxIe8D5fuyTncqvqZUfj/view?usp=sharing)
-
+- Autosteer unavailable: initially glass condensation and/or fog, and then direct sun. If a user can see/drive/operate, a machine shall perform the same operation at the same level or better than a human. Potential solutions applicable for rain, wet and high humidity environments: localized glass heating (cheap) and/or pneumatic air puff/blow on the glass (expensive/complicated within current camera position). 
+Video: [fsd-b-feedback-autosteer-unavailable-humidity-condensation-sunlight](https://drive.google.com/file/d/1UZ--i8y2XXe1_acXIsZhtE3ZAvhXhVA0/view?usp=sharing)
+- Regular disengagements -> autosteer unavailable: direct sunlight. If a user can see/drive/operate (based on camera image), a machine shall perform the same operation at the same level or better than a human. Additional improvement for reflection cases: use of polarized glass?
+Video: [fsd-b-feedback-disengagements-autosteer-unavailable-direct-sunlight](https://drive.google.com/file/d/16nfbN3qtueBooLFjFve228AxsQA3Digc/view?usp=sharing)
 ## Version: v10.2 | 2021.32.22 | 9e064485d2bf
 - Missing right-hand road bend/turn, crossing double yellow, driving into
 opposite direction traffic (WWD). 10 mph below speed limit. Head-on collision risk. Video: [fsd-feedback-missing-right-hand-bend-turn-into-head-on-traffic-20211030](https://drive.google.com/file/d/1zri_t-O--2HW6iV5zJDEdIgkm9PQMVmX/view?usp=sharing)
