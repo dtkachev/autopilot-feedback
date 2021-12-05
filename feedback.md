@@ -4,6 +4,14 @@ Tesla vehicles are the safest passenger cars on the road. Examples of Tesla vehi
 ## Version: FSD Beta v10.5 | 2021.36.8.8 |  3dea54806bfc
 - Didn't complete the turn necessary to avoid the curb. Without user intervention most likely would have jumped the curb. That curb had clearly seen prior jumpers missing the turn in similar fashion.
 Video: [fsd-b-feedback-didnt-complete-the-turn-to-avoid-jumping-the-curb](https://drive.google.com/file/d/1LO8dtp-kdlNpkjwNN8EmuJCtxoO6wwdz/view?usp=sharing)
+- Shifts suddenly to the left into the striped zone. Misreads the point of starting left turn maneuver. User intervention performs lane correction back into the leftmost lane. Safety Score logic shall ignore 1-5 sec of driver's corrective actions following disengagement - otherwise negative feedback loop.
+Video: [fsd-b-feedback-shifts-left-into-striped-zone-misreads-left-turn-starting-point](https://drive.google.com/file/d/1v9oqsIoSY8FKSLyk5Fv-uI4HmlBPkpwh/view?usp=sharing)
+- Incorrectly navigates left blind turn of the road by swerving into the opposing traffic lane. Head-on collision risk. Ultimately corrected the path and returned back into the right lane.
+Video: [fsd-b-feedback-left-blind-turn-in-the-opposing-lane](https://drive.google.com/file/d/1sULEziErFfZp12Xr6qnjhk25_VEyuR8Q/view?usp=sharing)
+- Attempts to perform a full stop (aggressive braking) after proceeding through this intersection on a yellow light. Misunderstands the spatial context of the red light at the end of this intersection, since it made a decision to proceed on yellow light. Rear-end collision risk. No reason to stop after crossing the intersection.
+Video: [fsd-b-feedback-full-stop-at-the-end-of-intersection-crossed-on-yellow](https://drive.google.com/file/d/1TPpNs0vZIwvu2Bi6u1uTBfXcMCxXjJsI/view?usp=sharing)
+- Misses braking point for left turn. Proceeded further than comfortable into the opposing traffic lane at the median. Head-on collision risk. Should have stopped sooner even if after the line, or conservatively at the line, awaiting the right moment for the intersection to clear.
+Video: [fsd-b-feedback-misses-left-turn-braking-point-into-opposing-lane](https://drive.google.com/file/d/11tPS517yHAS8_-n58P3KDPvSFZ5MnmNo/view?usp=sharing)
 - [1] Didn't adjust the route/path for parked vehicle in advance for a human driver to be "comfortable" to avoid disengagement. [2] Incorrectly performed "Emergency lane correction" back closer towards the high-risk zone of the parked truck after driver disengaged FSD and adjusted the route to account for the parked truck. Safety mechanism counteracted proper user correction.
 Video: [fsd-b-feedback-1-didnt-adjust-to-avoid-parked-vehicle-2-incorrectly-performed-emergency-lane-correction-into-parked-vehicle](https://drive.google.com/file/d/11Cicwl1Q4pURigGrIKXdymH_BGU0VIFp/view?usp=sharing)
 - Misreads end of lane. Proceeds forward in the striped zone of opposing traffic (yellow crosshatch lines). Head-on-collision risk. User intervention performs lane change to the right. Shall anticipate the end of the turning lane and switch in advance.
@@ -11,6 +19,10 @@ Video: [fsd-b-feedback-misreads-end-of-lane-proceeds-in-opposing-traffic-crossha
 - Misreads lane split. Attempts off-road lane-change into the right shoulder.
 User intervention stopped the maneuver.
 Video: [fsd-b-feedback-misreads-lane-split-attempts-off-road-lane-change-into-right-shoulder-dangerous](https://drive.google.com/file/d/1oIHE-woKOUIFLnoajdqlw661SWkANyZc/view?usp=sharing)
+- Misses right lane change to the off-ramp. Most likely got confused by the behavior of the vehicle in front.
+Video: [fsd-b-feedback-misses-right-lane-change-to-off-ramp-confused-by-front-vehicle](https://drive.google.com/file/d/1_Jt4FNUJSwaCQKLUt9IU93i57OVWGRlU/view?usp=sharing)
+- Performs left lane change maneuver late. There was space and time to perform lane change ahead of time.
+Video: [fsd-b-feedback-late-left-lane-change-maneuver](https://drive.google.com/file/d/1lS_3RFYv1zNoK9FDwI2FqqD-uX-i4smU/view?usp=sharing)
 - Missed lane change maneuver. Got stuck in the off ramp lane. User's intervention required for the left lane change.
 Video: [fsd-b-feedback-missed-left-lane-change-got-stuck-in-off-ramp-lane](https://drive.google.com/file/d/1-NtYQwnu9Lrcq07e39kzNy-kMKl8nhft/view?usp=sharing)
 - Gets stuck in between two lanes. Enough space to proceed on the left. User intervention proceeds the vehicle forward in the left turning lane.
@@ -26,6 +38,10 @@ Video: [fsd-b-feedback-tries-to-change-into-left-passing-late-despite-user-cance
 Video: [fsd-b-feedback-autosteer-unavailable-humidity-condensation-sunlight](https://drive.google.com/file/d/1UZ--i8y2XXe1_acXIsZhtE3ZAvhXhVA0/view?usp=sharing)
 - Regular disengagements -> autosteer unavailable: direct sunlight. If a user can see/drive/operate (based on camera image), a machine shall perform the same operation at the same level or better than a human. Additional improvement for reflection cases: use of polarized glass?
 Video: [fsd-b-feedback-disengagements-autosteer-unavailable-direct-sunlight](https://drive.google.com/file/d/16nfbN3qtueBooLFjFve228AxsQA3Digc/view?usp=sharing)
+- Safety score logic currently penalizes driver for the maneuvers performed right after FSD disengagement, even though they are performed for safety reasons. Positive feedback loop for using FSD breaks down as Safety Score penalizes a driver for exploring edge cases and giving more time for an FSD to attempt to recover before intervening. Suggestion: maneuvers within 1-5 seconds after FSD disengagement shall not lower Safety Score - though such blunt logic can be abused by drivers.
+- No slow down for bumps and dips. Doesn't recognize "DIP" sign.
+Video: [fsd-b-feedback-bumps-dips-no-slow-down](https://drive.google.com/file/d/1zN3PAoWlKs2NfVfwnIzCbIPcQdAEsWYF/view?usp=sharing)
+- No path adjustment for potholes. Doesn't allow driver input without disengagement to account for potholes / obstacles.
 ## Version: v10.2 | 2021.32.22 | 9e064485d2bf
 - Missing right-hand road bend/turn, crossing double yellow, driving into
 opposite direction traffic (WWD). 10 mph below speed limit. Head-on collision risk. Video: [fsd-feedback-missing-right-hand-bend-turn-into-head-on-traffic-20211030](https://drive.google.com/file/d/1zri_t-O--2HW6iV5zJDEdIgkm9PQMVmX/view?usp=sharing)
