@@ -115,10 +115,12 @@ Commentary:
 
 
 # Feature suggestions
-- Bug i18n incorrect spacing padding cyrillic fonts. Status: resolved.
-- Enable audible notifications for lane change requests.
+- Mobile app -> Service -> Appointment -> Services: Add ability to attach videos (10Mb limit per file), not just photos | Reason: video format provides better context to troubleshoot remotely and prepare
 - Show side camera for lane change maneuvers. Model 3 mirrors have dead zones.
 - Provide supercharger contact details via qr code for driver reports / user feedback url. Missing on many superchargers in US.
+- Dashcam -> Tap to record: In addition to video feeds, add a separate feed/source of a Touchscreen state of a screenshot(photo) or video of the last 15-60 seconds before the tap. Reason: will help troubleshooting UI edge cases and bugs.
 - Add search bar to contacts page UI.
+- Bug i18n incorrect spacing padding cyrillic fonts. Status: resolved.
+- Enable audible notifications for lane change requests. Status: resolved.
 
 
