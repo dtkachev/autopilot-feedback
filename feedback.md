@@ -12,8 +12,12 @@ Video: [fsd-b-feedback-left-blind-turn-in-the-opposing-lane](https://drive.googl
 Video: [fsd-b-feedback-full-stop-at-the-end-of-intersection-crossed-on-yellow](https://drive.google.com/file/d/1TPpNs0vZIwvu2Bi6u1uTBfXcMCxXjJsI/view?usp=sharing)
 - Misses braking point for left turn. Proceeded further than comfortable into the opposing traffic lane at the median. Head-on collision risk. Should have stopped sooner even if after the line, or conservatively at the line, awaiting the right moment for the intersection to clear.
 Video: [fsd-b-feedback-misses-left-turn-braking-point-into-opposing-lane](https://drive.google.com/file/d/11tPS517yHAS8_-n58P3KDPvSFZ5MnmNo/view?usp=sharing)
+- No slow down to 25 mph for the school zone from 40 mph. Fails to recognize flashing school zone speed limit in effect and reduce current speed limit.
+Video: [fsd-b-feedback-active-school-zone-no-slow-down-25mph](https://drive.google.com/file/d/1AwTI3z-zGTt7BwWcLmkROW74Hvsqj2k-/view?usp=sharing)
 - [1] Didn't adjust the route/path for parked vehicle in advance for a human driver to be "comfortable" to avoid disengagement. [2] Incorrectly performed "Emergency lane correction" back closer towards the high-risk zone of the parked truck after driver disengaged FSD and adjusted the route to account for the parked truck. Safety mechanism counteracted proper user correction.
 Video: [fsd-b-feedback-1-didnt-adjust-to-avoid-parked-vehicle-2-incorrectly-performed-emergency-lane-correction-into-parked-vehicle](https://drive.google.com/file/d/11Cicwl1Q4pURigGrIKXdymH_BGU0VIFp/view?usp=sharing)
+- Didn't adjust the route/path for parked vehicle in advance for a human driver to be "comfortable" to avoid disengagement. Path adjustment was too late and too close to the trailer.
+Video: [fsd-b-feedback-didnt-adjust-to-avoid-parked-vehicle-on-the-right](https://drive.google.com/file/d/1biv_9SkqagH7-VID8CzQhNaWvW4bu4pa/view?usp=sharing)
 - Misreads end of lane. Proceeds forward in the striped zone of opposing traffic (yellow crosshatch lines). Head-on-collision risk. User intervention performs lane change to the right. Shall anticipate the end of the turning lane and switch in advance.
 Video: [fsd-b-feedback-misreads-end-of-lane-proceeds-in-opposing-traffic-crosshatch-lines-head-on-collision-risk](https://drive.google.com/file/d/1_k7YXTQX_3obgDeqdi1FTGk2GgdMpoNR/view?usp=sharing)
 - Misreads lane split. Attempts off-road lane-change into the right shoulder.
@@ -27,6 +31,8 @@ Video: [fsd-b-feedback-late-left-lane-change-maneuver](https://drive.google.com/
 Video: [fsd-b-feedback-missed-left-lane-change-got-stuck-in-off-ramp-lane](https://drive.google.com/file/d/1-NtYQwnu9Lrcq07e39kzNy-kMKl8nhft/view?usp=sharing)
 - Gets stuck in between two lanes. Enough space to proceed on the left. User intervention proceeds the vehicle forward in the left turning lane.
 Video: [fsd-b-feedback-stuck-between-two-lanes-enough-space-to-proceed](https://drive.google.com/file/d/1oWwwQbsiA1dVWTEGaGN3dorOjlfUQZ-8/view?usp=sharing)
+- Right lane change hesitation before right-hand turn. Initiated lane-change, canceled it, returned back to the left lane, before attempting and completing the maneuver.
+Video: [fsd-b-feedback-right-lane-change-hesitation-cancellation](https://drive.google.com/file/d/1_ybxlc2bixz5c9-BVyXRwZwScBeGlqbb/view?usp=sharing)
 - Stuck in the left lane. No reason to stay in the passing lane. Right lane open.
 Shall change and proceed in the right lane.
 Video: [fsd-b-feedback-stuck-left-lane-right-lane-open](https://drive.google.com/file/d/1zF0z_xU_p8sxJSL0QzRLvYwl9-7O0GMb/view?usp=sharing)
@@ -41,6 +47,8 @@ Video: [fsd-b-feedback-disengagements-autosteer-unavailable-direct-sunlight](htt
 - Safety score logic currently penalizes driver for the maneuvers performed right after FSD disengagement, even though they are performed for safety reasons. Positive feedback loop for using FSD breaks down as Safety Score penalizes a driver for exploring edge cases and giving more time for an FSD to attempt to recover before intervening. Suggestion: maneuvers within 1-5 seconds after FSD disengagement shall not lower Safety Score - though such blunt logic can be abused by drivers.
 - No slow down for bumps and dips. Doesn't recognize "DIP" sign.
 Video: [fsd-b-feedback-bumps-dips-no-slow-down](https://drive.google.com/file/d/1zN3PAoWlKs2NfVfwnIzCbIPcQdAEsWYF/view?usp=sharing)
+- No slow down for road dip. Does not recognize the DIP sign ahead of the actual road dip.
+Video: [fsd-b-feedback-dip-sign-no-slow-down](https://drive.google.com/file/d/19V8hp5xSi2uUlAhuPqy5gO310iyUNwmW/view?usp=sharing)
 - No path adjustment for potholes. Doesn't allow driver input without disengagement to account for potholes / obstacles.
 ## Version: v10.2 | 2021.32.22 | 9e064485d2bf
 - Missing right-hand road bend/turn, crossing double yellow, driving into
