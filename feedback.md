@@ -1,7 +1,13 @@
-# Feedback
+# Feedback:
 
 Tesla vehicles are the safest passenger cars on the road. Examples of Tesla vehicles saving lives are endless. The following is a list of observations from edge cases, compiled in order to help accelerate (1) Autopilot's (FSD) learning rate, transition to (2) autonomous hands-free driving and (3) sustainable future.
 ## Version: FSD Beta v10.5 | 2021.36.8.8 |  3dea54806bfc
+- Enters the closed lane of the Toll booth gate. Vehicles ahead can be leveraged for initial guidance. Should be more proactive, adjusting in advance. Video: [fsd-b-feedback-enters-closed-toll-booth-lane](https://drive.google.com/file/d/1nbjoO00u7gX7HG6zPlec54rkDGZeJhfT/view?usp=sharing)
+- Misses stop sign notification and obstructed stop sign. Required intervention to stop. Video: [fsd-b-feedback-misses-stop-sign-notification-and-stop-sign](https://drive.google.com/file/d/17AcoEOa_0CE5uszEuof3RgqlyRGxhIje/view?usp=sharing)
+- Unmarked two-lane: right of way correction for head-on traffic route adjustment. Adjusts itself correctly in ~30% of instances, doesn't adjust in 70% of instances. Head-on collision risk. Video: [fsd-b-feedback-unmarked-twolane-right-correction-for-head-on-traffic](https://drive.google.com/file/d/1DRVKFfPRDrCDUfyO1Pm369VRPIhY9Non/view?usp=sharing)
+- Fails to slow down and adjust path to the right ahead of head-on traffic avoiding parked vehicle and crossing double yellow (for safety reasons) into our path and lane. Head-on collision risk. Video: [fsd-b-feedback-no-slowdown-path-correction-due-to-head-on-traffic-crossing-double-yellow](https://drive.google.com/file/d/1kdEipdu50QfdEc0jikdmba9ExhaCOaXx/view?usp=sharing)
+- Crossed double-yellow for no reason. Edge case - happens rarely (<~5-10%) in this build. Noticeable improvement on marked twisty two-lane roadways. Video: [fsd-b-feedback-crossed-double-yellow-no-reason](https://drive.google.com/file/d/1R9VEoNACtM2iB6flu0Uu77vsa_nQ3lVm/view?usp=sharing)
+- Unmarked two-lane: blind uphill requires path adjustment to the right for safety reasons to reduce risk of head on collision. However staying in the middle of the road when no head-on traffic seems reasonable as it is typically the best road surface. Video: [fsd-b-feedback-unmarked-two-lane-blind-uphill-requires-path-adjustment-right-side](https://drive.google.com/file/d/1uqPwXp7a9-L2mJztsiauEnNzRTbpB23L/view?usp=sharing)
 - Didn't complete the turn necessary to avoid the curb. Without user intervention most likely would have jumped the curb. That curb had clearly seen prior jumpers missing the turn in similar fashion.
 Video: [fsd-b-feedback-didnt-complete-the-turn-to-avoid-jumping-the-curb](https://drive.google.com/file/d/1LO8dtp-kdlNpkjwNN8EmuJCtxoO6wwdz/view?usp=sharing)
 - Shifts suddenly to the left into the striped zone. Misreads the point of starting left turn maneuver. User intervention performs lane correction back into the leftmost lane. Safety Score logic shall ignore 1-5 sec of driver's corrective actions following disengagement - otherwise negative feedback loop.
@@ -29,6 +35,10 @@ Video: [fsd-b-feedback-misses-right-lane-change-to-off-ramp-confused-by-front-ve
 Video: [fsd-b-feedback-late-left-lane-change-maneuver](https://drive.google.com/file/d/1lS_3RFYv1zNoK9FDwI2FqqD-uX-i4smU/view?usp=sharing)
 - Missed lane change maneuver. Got stuck in the off ramp lane. User's intervention required for the left lane change.
 Video: [fsd-b-feedback-missed-left-lane-change-got-stuck-in-off-ramp-lane](https://drive.google.com/file/d/1-NtYQwnu9Lrcq07e39kzNy-kMKl8nhft/view?usp=sharing)
+- Multiple disengagements. Does not follow vehicles ahead standing in the off-ramp lane. Attempts twice to go left even though right merge into the off-ramp will be problematic further down the road and other drivers will not be happy. Video: [fsd-b-feedback-tries-to-exit-the-only-off-ramp-lane-multiple-disengagements](https://drive.google.com/file/d/1vgVSJvLxo9OXKjzG3aXhqTr3wu63hoUZ/view?usp=sharing)
+- Fails to change into the right lane in advance to follow the route to make a planned right turn. Video: [fsd-b-feedback-fails-to-change-right-into-turning-lane](https://drive.google.com/file/d/1W4YTN9ZJhup5h__oCMuAYkU9QLMEdoVx/view?usp=sharing)
+- Not clear why attempted to perform a shift into the left lane. Hesitation. Video: [fsd-b-feedback-hesitation-not-clear-why-attempted-to-perform-change-into-left-lane]
+(https://drive.google.com/file/d/1bk1iPtPm1oszRevgAUYPkJNggGjJYsfE/view?usp=sharing)
 - Gets stuck in between two lanes. Enough space to proceed on the left. User intervention proceeds the vehicle forward in the left turning lane.
 Video: [fsd-b-feedback-stuck-between-two-lanes-enough-space-to-proceed](https://drive.google.com/file/d/1oWwwQbsiA1dVWTEGaGN3dorOjlfUQZ-8/view?usp=sharing)
 - Right lane change hesitation before right-hand turn. Initiated lane-change, canceled it, returned back to the left lane, before attempting and completing the maneuver.
@@ -50,6 +60,9 @@ Video: [fsd-b-feedback-bumps-dips-no-slow-down](https://drive.google.com/file/d/
 - No slow down for road dip. Does not recognize the DIP sign ahead of the actual road dip.
 Video: [fsd-b-feedback-dip-sign-no-slow-down](https://drive.google.com/file/d/19V8hp5xSi2uUlAhuPqy5gO310iyUNwmW/view?usp=sharing)
 - No path adjustment for potholes. Doesn't allow driver input without disengagement to account for potholes / obstacles.
+- Audio: random popping sounds in audio stream. Non-speaker related: 35-40% volume. Non-educated guess: either buffer overflow or multi-stream audio merge issues at playback. Happened with different number of "pops" (1) without touching screen (2) when touching record video button (3) when changing volume via steering wheel.
+Audio: []()
+- Not a bug, but a feature:
 ## Version: v10.2 | 2021.32.22 | 9e064485d2bf
 - Missing right-hand road bend/turn, crossing double yellow, driving into
 opposite direction traffic (WWD). 10 mph below speed limit. Head-on collision risk. Video: [fsd-feedback-missing-right-hand-bend-turn-into-head-on-traffic-20211030](https://drive.google.com/file/d/1zri_t-O--2HW6iV5zJDEdIgkm9PQMVmX/view?usp=sharing)
@@ -122,6 +135,14 @@ Commentary:
 - False positive large road objects - Autopilot wasn’t enabled at the time, but in the situation where a large flying object (plastic tarps, clothes, falling debris from other cars) is detected there is likelihood to lead to a phantom braking event. There are situations where hitting the object is unavoidable and is the best course of action, and other situations where safely avoiding the object is possible.
 
 
+
+
+
+
+
+# Not bugs, Features:
+- Correctly navigates flooded unmarked two-lane roadway. Suggestion: slow down to 10-15 mph to prevent hydroplaning, hidden holes, and bumper damage from initial hydrohit.fsd-b-feedback-feature-not-a-bug-correctly-navigates-unmarked-two-lane-roadway-unreal
+https://drive.google.com/file/d/1PUACtN7Tms-GXcjZP4liOaXxXqbsro7t/view?usp=sharing
 # Feature suggestions
 - Mobile app -> Service -> Appointment -> Services: Add ability to attach videos (10Mb limit per file), not just photos | Reason: video format provides better context to troubleshoot remotely and prepare
 - Show side camera for lane change maneuvers. Model 3 mirrors have dead zones.
