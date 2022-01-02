@@ -144,6 +144,7 @@ Commentary:
 - Correctly navigates flooded unmarked two-lane roadway. Suggestion: slow down to 10-15 mph to prevent hydroplaning, hidden holes, and bumper damage from initial hydrohit.fsd-b-feedback-feature-not-a-bug-correctly-navigates-unmarked-two-lane-roadway-unreal
 https://drive.google.com/file/d/1PUACtN7Tms-GXcjZP4liOaXxXqbsro7t/view?usp=sharing
 # Feature suggestions
+- Homelink -> Add support for opening/closing gates/doors by calling a dedicated phone number. 
 - Mobile app -> Service -> Appointment -> Services: Add ability to attach videos (10Mb limit per file), not just photos | Reason: video format provides better context to troubleshoot remotely and prepare
 - Show side camera for lane change maneuvers. Model 3 mirrors have dead zones.
 - Provide supercharger contact details via qr code for driver reports / user feedback url. Missing on many superchargers in US.
