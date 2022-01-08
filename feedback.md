@@ -1,6 +1,30 @@
 # Feedback:
 
 Tesla vehicles are the safest passenger cars on the road. Examples of Tesla vehicles saving lives are endless. The following is a list of observations from edge cases, compiled in order to help accelerate (1) Autopilot's (FSD) learning rate, transition to (2) autonomous hands-free driving and (3) sustainable future.
+## Version: FSD Beta v10.8 | 2021.44.25.6 | 1823f6d
+It is getting harder and harder to find obvious weak spots - the confidence of the FSD has improved quite a bit from 10.5.
+
+- Unexpected right turn into sidewalk after abandoning left turn attempt. Random and high risk maneuver. Video: [fsd-b-feedback-unexpected-right-turn-into-sidewalk-after-abandoning-left-turn-attempt](https://drive.google.com/file/d/15wbqFRMnjAkIFZx8mxqLrunqzOo05HWB/view?usp=sharing)
+- Incorrectly attempts to perform a left turn instead of the indicated right turn. Note: no route planner (address entered) in Navigate on Autopilot. Video: [fsd-b-feedback-Incorrectly-attempts-left-turn-instead-indicated-right-turn-and-misses-left-turn](https://drive.google.com/file/d/1yAsMGpz2GGBjDpkuj_ADWXohuOa4JyMe/view?usp=sharing)
+- Failed to perform a left turn maneuver. Attempted to block the right lane - failed to recognize two lanes and the vehicle in the back attempting to pass on the right. Video: [fsd-b-feedback-failed-to-perform-left turn-and-blocked-right-lane](https://drive.google.com/file/d/1eOII-67M6HKcNTBpvwWT22V2-jTp320S/view?usp=sharing)
+- Lane change without user confirmation. Require Lane Change Confirmation menu option not wired to FSD stack. Assume due to two separated stacks. However, lane changes have to be confirmed by user input, if the option to confirm is enabled by the user. Video: [fsd-b-feedback-lane-change-without-user-confirmation-despite-the-activated-menu-option-due-to-two-separate-stacks](https://drive.google.com/file/d/1z-886ybv39ujC4SiXvpcJ_c-Ky2VcTP5/view?usp=sharing)
+- Unmarked two-lane: right of way correction for head-on traffic route adjustment. Head-on collision risk. Improvement over 10.5. Video: [fsd-b-feedback-unmarked-two-lane-crosses-into-opposing-traffic-lane](https://drive.google.com/file/d/1v0DRQ60d7KNeXkqj6fD2_hIYjKv82koL/view?usp=sharing)
+- Unmarked two-lane: right of way correction for head-on traffic route adjustment. Head-on collision risk. Improvement over 10.5. Video: [fsd-b-feedback-unmarked-two-lane-right-of-way-correction-for-head-on-traffic-route-adjustment](https://drive.google.com/file/d/169zDDPN9YCUwIvj01SRrCm3-z0BsOLdV/view?usp=sharing)
+- Random slow downs at different speeds for no obvious reason without noticeable changes in the surrounding environment. Video: 
+[fsd-b-feedback-random-velocity-changes-slow-downs-without-changes-in-environment](https://drive.google.com/file/d/1MyTP6yBhcqe7kRoGY8Rox3DAFG8M30ZU/view?usp=sharing)
+- Velocity oscillations: random slow downs without significant changes in the surrounding environment. Video: [fsd-b-feedback-unexpected-and-unnecessary-left-lane-change](https://drive.google.com/file/d/1IHmC9iVd0S1KmYI1Ku2MS-bvwZzpRbl5/view?usp=sharing)
+- Constant lane change requests despite user Cancel input. Video: [fsd-b-feedback-constant-lane-change-requests-despite-user-Cancel-input](https://drive.google.com/file/d/1RpSen71oWD1zPyyzgZ3Lrw5zQvfj8m62/view?usp=sharing)
+- Incorrect visualisation of blinking yellow lights. In addition, incorrectly			depicts yellow as a red light. Video: [fsd-b-feedback-incorrect-visualisation-blinking-yellow-lights-and-yellow-as-red-light](https://drive.google.com/file/d/1EmhDAv-XrJpmBetp4M7omIrSUSjFo8KP/view?usp=sharing)
+- Indicating lane change maneuver - reason not clear. Video: [fsd-b-feedback-indicating-lane-change-maneuver-without-actual-turn](https://drive.google.com/file/d/1b1ROk-NZACW8tiKlm3WPOW1hylFy9FUF/view?usp=sharing)
+- Changing into the left lane later than ideal Video:  [fsd-b-feedback-changing-into-left-lane-later-than-ideal](https://drive.google.com/file/d/1b7bhBpsvzlF3S5Q6XS3nMGDWzKgjeUnl/view?usp=sharing)
+- Too fast into the right turn crossing into the opposing lane. Head-on collision risk.  Video: [fsd-b-feedback-too-fast-into-right-turn-crossing-into-opposing-lane](https://drive.google.com/file/d/1UxeqELgSpIvvyxLCFIbm1loXH0muBdk9/view?usp=sharing)
+
+Non FSD related:
+- UI -> iOS App -> Bug: Home screen  distance units mismatch - inconsistent use of both mi and km. Shall be either mi or km, based on user preference. https://github.com/dtkachev/autopilot-feedback/issues/1
+- UI -> Redundant input zones: too many places for HomeLink control. Lack of consistency leads to confusion. https://github.com/dtkachev/autopilot-feedback/issues/2
+- UI -> V11 dashcam icon is missing. User can submit autopilot feedback, but cannot trigger record/store video via button (can still be done via Honk to record/store - however using honk on the road is not always appropriate from safety perspective).
+- UI -> Full screen mode needs refinement and formatting/realignment - placement of road name / next turn direction element is strange - has to be realigned in full screen mode.
+- HomeLink -> Bug: manually activating HL to open garage door to drive out deactivates HL auto-close. User shall be able to activate HL to open garage door without deactivating HL auto-close functionality. Pressing HL to open garage door shall not be interpreted as Skip event.
 ## Version: FSD Beta v10.5 | 2021.36.8.8 |  3dea54806bfc
 - Aggressive left turn attempt in traffic. Not for the faint-hearted. High risk. Video:
 [fsd-b-feedback-aggressive-left-turn-attempt-in-traffic](https://drive.google.com/file/d/1_TfGX7xAOXdiMcopDapBCJ7wDBGLp7bs/view?usp=sharing)
@@ -154,7 +178,8 @@ Commentary:
 - Correctly navigates flooded unmarked two-lane roadway. Suggestion: slow down to 10-15 mph to prevent hydroplaning, hidden holes, and bumper damage from initial hydrohit.fsd-b-feedback-feature-not-a-bug-correctly-navigates-unmarked-two-lane-roadway-unreal
 https://drive.google.com/file/d/1PUACtN7Tms-GXcjZP4liOaXxXqbsro7t/view?usp=sharing
 # Feature suggestions:
-- Homelink -> Add support for opening/closing gates/doors by calling a dedicated phone number. 
+- Homelink -> Add support for opening/closing gates/doors by calling a dedicated phone number.
+- Homelink -> When Drive is engaged and the garage door is closed (confirmed by front video and HL status) and the driver is pressing accelerator pedal, HL shall trigger garage door opening event.
 - Mobile app -> Service -> Appointment -> Services: Add ability to attach videos (10Mb limit per file), not just photos | Reason: video format provides better context to troubleshoot remotely and prepare
 - Show side camera for lane change maneuvers. Model 3 mirrors have dead zones. Status: resolved.
 - Provide supercharger contact details via qr code for driver reports / user feedback url. Missing on many superchargers in US.
