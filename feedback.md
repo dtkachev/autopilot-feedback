@@ -1,6 +1,34 @@
 # Feedback:
 
 Tesla vehicles are the safest passenger cars on the road. Examples of Tesla vehicles saving lives are endless. The following is a list of observations from edge cases, compiled in order to help accelerate (1) Autopilot's (FSD) learning rate, transition to (2) autonomous hands-free driving and (3) sustainable future.
+## Version: FSD Beta v10.9 | 2021.44.30.5 | 81562c9c7b28
+- Attempted to get too close to a school bus (with flashing red lights) by changing into the right lane to pass the front vehicle in the left lane, which was waiting for the bus to complete its stop. Didn't have footage saved unfortunately, but was reported via Feedback button.
+- Attempted left lane change into moving semi. Truck had to perform an evasive maneuver. Misread velocity difference. Dangerous to leave little space for semi - braking can jacknife their rig. Video: [fsd-b-feedback-attempted-left-lane-change-into-moving-semi-truck-had-to-perform-evasivemaneuver](https://drive.google.com/file/d/1MThFma1s_48d6vhMsiGu-faoUfz2-lg3/view?usp=sharing)
+- Missed speed limits (going up (70 mph) twice and going down (to 60 or 55 mph - not shown) at nighttime. Video: [fsd-b-feedback-missed-speed-limits-going-up-70-mph-twice-and-going-down-to-60-or-55-mph](https://drive.google.com/file/d/1mMV2ulCyjDjQDUDTzkXfFh5P-GGsI4em/view?usp=sharing)
+- Attempted to cross double yellow at the end of the left turn. Lane entrance trajectory logic. Not smooth. Video: [fsd-b-feedback-attempted-to-cross-double-yellow-at-the-end-of-the-left-turn-lane-entrance-trajectory-logic-not-smooth](https://drive.google.com/file/d/1R7asoGWNpFDPpbdLv1qgFYM0xPS0aGhM/view?usp=sharing)
+- Speed oscillations (2-7 mph) with braking and audible alerts at night. Nighttime hesitation when detects oncoming traffic lights. Aggressive braking for an offroad (off asphalt) vehicle.[fsd-b-feedback-speed-oscillations-2-7-mph-with-braking-and-audible-alerts-at-night](https://drive.google.com/file/d/1fgadw9jdg2fHpepMW7cZOpdf9CPw1iFE/view?usp=sharing)
+- Notification "FSD might be degraded" at nighttime. Might be glare, reflections, contrast, etc. Not hardware related - on lit highway or next morning no concerns without any cleaning. Should show which camera to clean manually - not actionable. Video: [fsd-b-feedback-Notification-fsd-might-be-degraded-at-nighttime-might-be-glare-reflections-contrast](https://drive.google.com/file/d/1DKndn6OIiz9W6U94NDeYy-jHg3vbB-nB/view?usp=sharing)
+- Delayed speed limit change to 35 mph. Dark and narrow road required more rapid deceleration. Video: [fsd-b-feedback-delayed-speed-limit-change-to-35-mph-on-dark-and-narrow-road](https://drive.google.com/file/d/1WvuyhbjdPc3pxP26ntzdnXCgCOTec0fm/view?usp=sharing)
+- Crossed double white during left lane change. Not necessary. Too aggressive - the situation didn't justify such a move. Video: [fsd-b-feedback-crossed-double-white-during-left-lange-change-not-necessary](https://drive.google.com/file/d/1vn9iOqldQGqobSPbeFnSXS27q8B3d3CG/view?usp=sharing)
+- Failed to recognize digital Reduce Speed 45 mph sign. Attempted to perform right lane change into a closed lane with construction cones. Didn't plan ahead far enough even though lane closure cones were visible. Video: [fsd-b-feedback-failed-to-recognize-digital-reduce-speed-45-mph-sign-attempted-to-perform-right-lane-change-into-closed-lane-with-construction-cones](https://drive.google.com/file/d/1QJzQeIm1NTK-xBDXVSJJmv44v7jjnBBx/view?usp=sharing)
+- Phantom braking for a non-applicable stop sign at road fork of a merging road. Video: [fsd-b-feedback-phantom-braking-for-non-applicable-stop-sign-2](https://drive.google.com/file/d/1skOz7vyDpu1w9_Pma3B_ilxTCNrn7xX3/view?usp=sharing)
+- Phantom braking in the right lane (40 to 26 mph). Reason not clear. Video: [fsd-b-feedback-phantom-braking-in-the-right-lane-reason-not-clear](https://drive.google.com/file/d/1Ryw5vgKUYvU-gBLcmJiXHCG7ydKRbGSz/view?usp=sharing)
+- Right turn path is not smooth. Not in the middle of the lane. Video: [fsd-b-feedback-right-turn-path-not-smooth-not-in-the-middle-of-the-lane](https://drive.google.com/file/d/1I_gMjwk7yBOcbBC-QW9fCBSfnytpViOO/view?usp=sharing)
+- Attempted to pass a vehicle in front on the left while in the merge lane performing a right turn. Can be dangerous by blocking the view of the front vehicle during the merge. Video: [fsd-b-feedback-attempted-to-pass-vehicle-in-front-on-the-left-while-in-the-merge-lane-performing-right-turn](https://drive.google.com/file/d/12xjb4KH1gaJrchxUnJZ6JAZP4ljGdelX/view?usp=sharing)
+- Shifts to the left into the striped zone. Misreads the point of starting the left turn maneuver. User intervention performs lane correction back to the right into the leftmost lane. Video: [fsd-b-feedback-shifts-left-into-striped-zone-misreads-left-turn-starting-point-2](https://drive.google.com/file/d/18sdvkxhwKKDDboP50oMozaiQLg-nmr1u/view?usp=sharing)
+- Got squeezed at the end of the left lane. Failed to recognize lane closure construction cones ahead. Requires further ahead planning. Video: [fsd-b-feedback-got-squeezed-at-the-end-of-the-lane-failed-to-recognize-lane-closure-construction-cones-ahead](https://drive.google.com/file/d/12H_UJC3kV6lPV7T-JEv77UzLQ9HLa7Nj/view?usp=sharing)
+- Right lane change request into a vehicle. Timing of the request is incorrect. To avoid confusion shall there be two states/colors: plan ahead = intent (light gray) and request to act (current blue)? Video: [fsd-b-feedback-right-lane-change-request-into-a-vehicle-timing-of-the-request-is-incorrect](https://drive.google.com/file/d/1jp8ibQeSrioci6mztsF5bTcf9RBbr-JQ/view?usp=sharing)
+- Left lane affinity. No reason to move out of the right lane. Video: [fsd-b-feedback-left-lane-affinity-no-reason-to-move-out-of-the-right-lane](https://drive.google.com/file/d/1AoupAm5obJ-k4xu3K0L_YAEy6eKipUS7/view?usp=sharing)
+- Emergency vehicles not visualized correctly.  Video: [fsd-b-feedback-emergency-vehicles-not-visualized-correctly](https://drive.google.com/file/d/15LUOyUMfVUizHk5vbZssB0a__WWNGFgS/view?usp=sharing)
+
+General comments:
+- Deceleration curve adjustment is noticeable - particularly before lights. Getting to the point of being smoother than a professional driver. Not as smooth when another vehicle is in front, nevertheless noticeable improvement.
+
+Non FSD related feature suggestions:
+- Sentry mode - record Cabin camera footage (in the event of break ins, thefts, attacks, etc)
+- Sentry - Live Camera view: Add Cabin camera view 
+- Sentry - Walkie Talkie mode with Cabin camera view - let the driver talk to passengers remaining inside the vehicle while the driver is away (two-way only). Similar functionality to Boombox Pedestrian Warning Speaker, but inside the vehicle.
+- Caraoke - add Cabin camera video integration: record karaoke session and let user's save their performance to USB, send url link to the video file to an external device, submit to social (Tik Tok)
 ## Version: FSD Beta v10.8.1 | 2021.44.30.5 | 81562c9c7b28
 It is getting harder and harder to find obvious weak spots - the confidence of the FSD has improved quite a bit from 10.5.
 
@@ -225,5 +253,3 @@ https://drive.google.com/file/d/1PUACtN7Tms-GXcjZP4liOaXxXqbsro7t/view?usp=shari
 - Add search bar to contacts page UI.
 - Bug i18n incorrect spacing padding cyrillic fonts. Status: resolved.
 - Enable audible notifications for lane change requests. Status: resolved.
-
-
