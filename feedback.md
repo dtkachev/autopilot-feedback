@@ -1,6 +1,42 @@
 # Feedback:
 
 Tesla vehicles are the safest passenger cars on the road. Examples of Tesla vehicles saving lives are endless. The following is a list of observations from edge cases, compiled in order to help accelerate (1) Autopilot's (FSD) learning rate, transition to (2) autonomous hands-free driving and (3) sustainable future.
+## Version: FSD Beta v10.12.2 | 2022.12.3.20 | cfe1aeaefb6d
+- Attempted to cross double-yellow into a truck with trailer. Head-on collision risk.
+Video: [fsd-b-feedback-attempted-to-cross-double-yellow-into-truck-with-trailer-head-on-collision-risk](https://drive.google.com/file/d/1CkdjyFe-edwnrGchm_EiUHrrWOgcM1WJ/view?usp=sharing)
+- Dangerous on-ramp highway merge. Crossed solid white line and yield sign.
+Video: [fsd-b-feedback-dangerous-on-ramp-highway-merge-crossed-solid-white-line-and-yield-sign](https://drive.google.com/file/d/18DpQGq1_aI6BFBi-JwdXeIMZglBekCMU/view?usp=sharing)
+- Zig-zag between two lanes. Random. Not necessary.
+Video: [fsd-b-feedback-zig-zag-between-two-lanes-random-not-necessary](https://drive.google.com/file/d/1PHd7dwjijpfLY3JjpslYHQn-8dYYJ04B/view?usp=sharing)
+- Roadworks. Attempted to shift right into the closed coned off lane.
+Video: [fsd-b-feedback-roadworks-attempted-to-shift-right-into-the-closed-coned-off-lane](https://drive.google.com/file/d/1Ik05BimM84AaR9vJ2qMqez2wgCHj9_rK/view?usp=sharing)
+- Planner fails to anticipate left lane shift ahead of the road construction cones.
+Video: [fsd-b-feedback-planner-fails-to-aniticipate-left-lane-shift-ahead-of-the-road-construction-vehicle-blocking-closed-off-lane-similar-to-the-vehicles-ahead](https://drive.google.com/file/d/1_2dcgnr5sjlSLsvOpJCO4S67KYpTzvv_/view?usp=sharing)
+- Attempted to cross divider and drive in the head-on traffic lane. No reason.
+Video: [fsd-b-feedback-attempted-to-cross-divider-and-drive-in-the-head-on-traffic-lane-no-reason](https://drive.google.com/file/d/1JAvlrmq_gHI5c_eKxsEWuEdVfoGxGW1W/view?usp=sharing)
+- Planner fails to stay in the right lane turning left in anticipation of right hand turn ahead. Zig-zag from the initially correct lane. Attempts to correct and switch back into the correct lane too late.
+Video: [fsd-b-feedback-planner-fails-to-stay-in-the-right-lane-turning-left-in-anticipation-of-right-handturn-ahead-zig-zag-from-initially-correct-lane-attempts-to-correct-and-switch-back-into-the-correct-lane-too-late](https://drive.google.com/file/d/1w_nMqmwAa5qvCShdvoiVXgkUQH6VCH1O/view?usp=sharing)
+- Attempted to pass the vehicle ahead by turning into the left turn only lane.
+Video: [fsd-b-feedback-attempted-to-pass-the-vehicle-ahead-by-turning-into-left-turn-only-lane](https://drive.google.com/file/d/1vd3pgdklnCgiwf01Uez6ihRpByAEygW6/view?usp=sharing)
+- Attempted to turn left into the divider left turn-only lane. Lane cannot be used for normal passing. Head-on collision risk.
+Video: [fsd-b-feedback-attempted-to-turn-left-into-divider-left-turn-only-lane-lane-cannot-be-used-for-normal-passing-head-on-collision-risk](https://drive.google.com/file/d/1Ib8o5ao1S_QQlqRGLUnaC9K3bS8jsC4L/view?usp=sharing)
+- Attempted to pass the vehicle by crossing double yellow in the opposite lane. Head-on collision risk.
+Video: [fsd-b-feedback-attempted-to-pass-the-vehicle-by-crossing-double-yellow-in-the-opposite-lane-head-on-collision-risk](https://drive.google.com/file/d/1G8OWvQZRmDAJ09FCBEedUTGmiSS4wFtw/view?usp=sharing)
+- Attempts to shift into the right turn-only lane while going straight.
+Video: [fsd-b-feedback-attempts-to-shift-into-right-turn-only-lane-while-going-straight](https://drive.google.com/file/d/12abhUAEEHjsg1TSQL5dmKq1Xb3LmtcOc/view?usp=sharing)
+- Fails to recognize 65 mph speed limit sign. Stuck at 55 mph limit.
+Video: [fsd-b-feedback-fails-to-recognize-65-mph-speed-limit-sign-stuck-at-55-mph-limit](https://drive.google.com/file/d/1AiZg1weMQg2mURZf701mPMA1q5bsOjjE/view?usp=sharing)
+- Phantom braking at a shut off intersection light.
+Video: [fsd-b-feedback-phantom-braking-at-a-shut-off-intersection-light](https://drive.google.com/file/d/18S9K6ctbKn2dAyuUv9qupdVRnzVHzFYV/view?usp=sharing)
+- In between opposing lanes: Planner fails to anticipate left hand turn ahead and misses left lane change for a left turn. Both during daytime and nighttime. Right lane is straight only at the intersection - leads to failure to perform a left turn at the intersection and reroute.
+Video: [fsd-b-feedback-in-between-opposing-lanes-misses-left-lane-change-for-a-left-turn-both-during-daytime-and-nighttime-right-lane-is-straight-only-at-the-intersection-leads-tofailure-to-perform-a-left-turn-at-the-intersection-and-reroute](https://drive.google.com/file/d/1E19ov9qHw0dUZww2oHQCA3Wgx9d0Pdcy/view?usp=sharing)
+- Misjudged lane spacing. Attempted to drive in the parking lane.
+Video: [fsd-b-feedback-misjudged-lane-spacing-attempted-to-drive-in-the-parking-lane](https://drive.google.com/file/d/1skQEKVbVA-UsllL3mbnlrgJZvwxxQR_J/view?usp=sharing)
+- Crossing the bike lane during the right hand turn too early. Not necessary.
+Video: [fsd-b-feedback-crossing-bike-lane-during-right-hand-turn-too-early-not-necessary](https://drive.google.com/file/d/12BXsYr5-WFQbPVtIYTnnNW1ZVtL6tle6/view?usp=sharing)
+Additional:
+- Random phantom slow downs 5-10 at 55-65 mph. Reported via feedback button.
+- Fails to slow down soon enough when entering towns 55 and 40 mph zone. Can get a speeding ticket. Reported via feedback button.
 ## Version: FSD Beta v10.11.2 | 2021.44.30.21 | c4a356541fbc
 - Performs unsubstantiated full stop at crosswalk - not justified due to absence of pedestrians or a stop-sign. Safe, but unnecessary maneuver in this instance.
 Video: [fsd-b-feedback-performs-unsubtantiated-full-stop-at-crosswalk-not-justified-due-to-absence-of-pedestrians-or-a-stop-sign](https://drive.google.com/file/d/17myPKxfr6rcuM-31qPbBXrNc_cvS_LbS/view?usp=sharing)
