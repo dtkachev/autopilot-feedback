@@ -1,6 +1,15 @@
 # Feedback:
 
 Tesla vehicles are the safest passenger cars on the road. Examples of Tesla vehicles saving lives are endless. The following is a list of observations from edge cases, compiled in order to help accelerate (1) Autopilot's (FSD) learning rate, transition to (2) autonomous hands-free driving and (3) sustainable future.
+## Version: FSD Beta v10.10.2 | 2021.44.30.21 | c4a356541fbc
+- Went on a red light through the intersection. Amber-yellow light was visible well in advance to brake before the intersection. Not safe. Head-on collision risk.
+Video: [fsd-b-feedback-blew-red-light-through-the-intersection-2](https://drive.google.com/file/d/1kE0izThdwBUYiXConmQhaZkgyKpmhhOd/view?usp=sharing)
+- In between opposing lanes: misses left lane change for a left turn. Both during daytime and nighttime. Right lane is straight only at the intersection - leads to failure to perform a left turn at the intersection and reroute.
+Video: [fsd-b-feedback-in-between-opposing-lanes-misses-left-lane-change-for-the-following-left-turn-right-lane-is-straight-only-at-the-intersection-leads-to-reroute](https://drive.google.com/file/d/1joX3DE-FnH6zRJD3TjVUXJn31oiSUlT1/view?usp=sharing)
+- In between opposing lanes: turned right into the opposing lane. Didn't follow the traffic pattern trajectory / path. Edge-case even for humans - drivers regularly misread this intersection and actually drive through the opposing-lane. Head-on collision risk.
+Video: [fsd-b-feedback-in-between-opposing-lanes-turned-right-into-the-opposing-lane-didnt-follow-traffic-pattern-trajectory-2](https://drive.google.com/file/d/1V7jz6Q_hpWDXTIdYkLnHBsmI9EDDwxBf/view?usp=sharing)
+- False-positive low-speed head-on collision warnings in parking lots - several instances took place in the parking lot for human and parked vehicles. Submitted feedback via UI, no video. Significantly impacts Safety Score for the trip even though it was false-positive at 3-7 mph.
+
 ## Version: FSD Beta v10.9 | 2021.44.30.5 | 81562c9c7b28
 - Sudden left shift into opposing traffic in the left turn-only middle lane. Head-on collision risk.  Video: [fsd-b-feedback-sudden-left-shift-into-opposing-traffic-in-left-turn-only-middle-lane-head-on-collision-risk](https://drive.google.com/file/d/1IjmMNjgcUNRGCBu1T4QtojIAp5BespUb/view?usp=sharing)
 - Edge case: in between opposing lanes: turned right into the opposing lane. Video: [fsd-b-feedback-in-between-opposing-lanes-turned-right-into-the-opposing-lane](https://drive.google.com/file/d/1jDr3mwRGrUCbsolvqE2kaK_PyH1O4CFa/view?usp=sharing)
