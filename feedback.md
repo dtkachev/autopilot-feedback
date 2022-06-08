@@ -1,6 +1,24 @@
 # Feedback:
 
 Tesla vehicles are the safest passenger cars on the road. Examples of Tesla vehicles saving lives are endless. The following is a list of observations from edge cases, compiled in order to help accelerate (1) Autopilot's (FSD) learning rate, transition to (2) autonomous hands-free driving and (3) sustainable future.
+## Version: FSD Beta v10.11.2 | 2021.44.30.21 | c4a356541fbc
+- Random right turn into non-existing lane.
+Video: [fsd-b-feedback-attempted-to-swerve-to-the-right-off-the-highway-into-emergency-parking-lane-misread-road-markings](https://drive.google.com/file/d/1GfuZakxUSLQCyqIXroCLvAugRlgFCIqQ/view?usp=sharing)
+- Fails to recognize roadworks vehicle in the only lane and adjust the path well in advance similar to vehicles ahead
+Video: [fsd-b-feedback-fails-to-recognize-roadworks-vehicle-in-the-only-lane-and-adjust-the-path-well-in-advance-similar-to-vehicles-ahead](https://drive.google.com/file/d/1QBMygZUkg6e-9pE-8p3tXE8OqSAwyS24/view?usp=sharing)
+- Not confident enough in switching into empty right lane to proceed for the right turn ahead
+Video: [fsd-b-feedback-not-aggressive-enough-in-switching-into-empty-right-lane-to-proceed-for-the-right-turn-ahead](https://drive.google.com/file/d/1EUaOTPkrc6Ptu5PpOUCMaupAodpGCNvX/view?usp=sharing)
+- Doesn't decelerate fast enough when entering lower speed limit zones. Risk of a ticket.
+Video: [fsd-b-feedback-fails-to-decelerate-quick enough-to-45-mph-speed-limit-risk-of-speeding-ticketwhen-entering-slower-speed-limits](https://drive.google.com/file/d/1CgpAQFtTDWAOyA-n5uozNQK_pcmq5VpA/view?usp=sharing)
+- Fails to recognise and slow down to active school zone signs.
+Video: [fsd-b-feedback-fails-to-recognise-active-school-zone-flashing-yellow-sign-and-adjust-speedlimit-to-25-from-40-mph](https://drive.google.com/file/d/1XQNmQyUEaWXIyiVWnTiAjAKQdeKo-L-p/view?usp=sharing)
+- In between opposing lanes: misses left lane change for a left turn. Both during daytime and nighttime. Right lane is straight only at the intersection - leads to failure to perform a left turn at the intersection and reroute.
+Video: [fsd-b-feedback-in-between-opposing-lanes-misses-left-lane-change-for-a-left-turn-both-duringdaytime-and-nighttime-right-lane-is-straight-only-at-the-intersection-leads-tofailure-to-perform-a-left-turn-at-the-intersection-and-reroute](https://drive.google.com/file/d/1VQziAeJr5fUtYUltfh_qnQ1u6MN_3CPi/view?usp=sharing)
+- Confused while leaving private parking lots while Navigate-on-autopilot is engaged.
+- Highway speeds slow downs for vehicles ahead too late / aggressively - if driven manually such decelerations rates would cause Safety Score hits due to late braking.
+- UI: Camera playback viewer consistently fails to load when parked - stuck view.
+Video: [fsd-b-feedback-ui-camera-playback-viewer-fails-to-load-stuck-dark-view-window](https://drive.google.com/file/d/1FInwLfiaLwpqKwZmdY7wHC9Ax0jIP90h/view?usp=sharing)
+
 ## Version: FSD Beta v10.10.2 | 2021.44.30.21 | c4a356541fbc
 - Went on a red light through the intersection. Amber-yellow light was visible well in advance to brake before the intersection. Not safe. Head-on collision risk.
 Video: [fsd-b-feedback-blew-red-light-through-the-intersection-2](https://drive.google.com/file/d/1kE0izThdwBUYiXConmQhaZkgyKpmhhOd/view?usp=sharing)
