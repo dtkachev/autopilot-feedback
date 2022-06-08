@@ -2,6 +2,16 @@
 
 Tesla vehicles are the safest passenger cars on the road. Examples of Tesla vehicles saving lives are endless. The following is a list of observations from edge cases, compiled in order to help accelerate (1) Autopilot's (FSD) learning rate, transition to (2) autonomous hands-free driving and (3) sustainable future.
 ## Version: FSD Beta v10.11.2 | 2021.44.30.21 | c4a356541fbc
+- Fails to recognise lane merge and the vehicle in the left lane (Honda not visible in the left side repeater camera). Shall either accelerate or slow down to plan ahead to perform smooth lane merge with spatial awareness of the vehicle in the blind spot.
+Video: [fsd-b-feedback-fails-to-recognise-lane-merge-and-the-vehicle-in-the-left-lane](https://drive.google.com/file/d/1Mgec2YAAwo8d3SqpMVt_TDpxznFDYmbr/view?usp=sharing)
+- Phantom braking on a non-applicable stop sign at an acute angle right road junction.
+Video: [fsd-b-feedback-phantom-braking-on-non-applicable-stop-sign-at-acute-angle-right-road-junction](https://drive.google.com/file/d/1GlFLndesVt36_nHjGbb94hzHu93ocjre/view?usp=sharing)
+- Failed to recognise 65 mph speed limit sign and lift the speed limit. Stuck at 55 mph ceiling until the next speed limit sign. User is not allowed to lift the speed limit beyond 50+5 mph despite failure to recognise speed limit sign.
+Video: [fsd-b-feedback-failed-to-recognise-65-mph-speed-limit-sign-and-lift-the-speed-limit-ceiling](https://drive.google.com/file/d/1XZfPUFZlKFNw7nH1cBGwQWWW1yYrLLUQ/view?usp=sharing)
+- Response latency - continues aggressive deceleration even after the vehicle in front is out of the pathway - can lead to rear end collisions in direct sunlight.
+Video: [fsd-b-feedback-response-latency-continues-aggressive-deceleration-even-after-the-vehicle-infront-is-out-of-the-pathway](https://drive.google.com/file/d/1fRbh4U1daI6wEj3-6Wed5IQUlKSjamPa/view?usp=sharing)
+- Crossed double-yellow lane divider on right banked turn. Too close for comfort in traffic. 
+Video: [fsd-b-feedback-crossed-double-yellow-lane-divider-on-right-banked-turn](https://drive.google.com/file/d/1zYYL1IQ6NU4gWuSwAkXOyIJmvkZ2KHwx/view?usp=sharing)
 - Random right turn into non-existing lane.
 Video: [fsd-b-feedback-attempted-to-swerve-to-the-right-off-the-highway-into-emergency-parking-lane-misread-road-markings](https://drive.google.com/file/d/1GfuZakxUSLQCyqIXroCLvAugRlgFCIqQ/view?usp=sharing)
 - Fails to recognize roadworks vehicle in the only lane and adjust the path well in advance similar to vehicles ahead
