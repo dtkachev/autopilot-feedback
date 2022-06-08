@@ -2,6 +2,14 @@
 
 Tesla vehicles are the safest passenger cars on the road. Examples of Tesla vehicles saving lives are endless. The following is a list of observations from edge cases, compiled in order to help accelerate (1) Autopilot's (FSD) learning rate, transition to (2) autonomous hands-free driving and (3) sustainable future.
 ## Version: FSD Beta v10.11.2 | 2021.44.30.21 | c4a356541fbc
+- Performs unsubstantiated full stop at crosswalk - not justified due to absence of pedestrians or a stop-sign. Safe, but unnecessary maneuver in this instance.
+Video: [fsd-b-feedback-performs-unsubtantiated-full-stop-at-crosswalk-not-justified-due-to-absence-of-pedestrians-or-a-stop-sign](https://drive.google.com/file/d/17myPKxfr6rcuM-31qPbBXrNc_cvS_LbS/view?usp=sharing)
+- Attempts to perform wrong direction (right) lane change prior to the (left) turn from the turn only lane, and vice versa.
+Video: [fsd-b-feedback-attempts-to-perform-wrong-direction-right-lane-change-prior-to-the-left-turnfrom-the-turn-only-lane](https://drive.google.com/file/d/1aDCF6gje7uidF83XHMrUAIR-WoCQSWba/view?usp=sharing)
+- In between opposing lanes: turned right into the opposing lane. Didn't follow the traffic pattern trajectory / path.
+Video: [fsd-b-feedback-in-between-opposing-lanes-turned-right-into-the-opposing lane-didnt-follow-traffic-pattern-trajectory-path](https://drive.google.com/file/d/1RylJqG-EGNL7eVEYafzo1ZO-n6ES9Fwz/view?usp=sharing)
+- In between opposing lanes: attempted to jump the left curb to turn left into the opposing lane. Full visualisation loss. Failed to follow traffic pattern ahead with clear road markings. Dangerous intersection in the event of full snow/sand coverage of the road marks.
+Video: [fsd-b-feedback-in-between-opposing-lanes-attempted-to-jump-the-left-curb-to-turn-left-into-the-opposing-lane](https://drive.google.com/file/d/12mQdqlAwJjQwoU1nNJLRIWF7hSmuCsLM/view?usp=sharing)
 - Fails to recognise lane merge and the vehicle in the left lane (Honda not visible in the left side repeater camera). Shall either accelerate or slow down to plan ahead to perform smooth lane merge with spatial awareness of the vehicle in the blind spot.
 Video: [fsd-b-feedback-fails-to-recognise-lane-merge-and-the-vehicle-in-the-left-lane](https://drive.google.com/file/d/1Mgec2YAAwo8d3SqpMVt_TDpxznFDYmbr/view?usp=sharing)
 - Phantom braking on a non-applicable stop sign at an acute angle right road junction.
