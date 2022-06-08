@@ -2,6 +2,16 @@
 
 Tesla vehicles are the safest passenger cars on the road. Examples of Tesla vehicles saving lives are endless. The following is a list of observations from edge cases, compiled in order to help accelerate (1) Autopilot's (FSD) learning rate, transition to (2) autonomous hands-free driving and (3) sustainable future.
 ## Version: FSD Beta v10.12.2 | 2022.12.3.20 | cfe1aeaefb6d
+- Fails to react to engage brakes and countersteer due to aggressive vehicle cutting left two lanes from far right on-ramp. Collision risk. Wideangle blind spot. 
+fsd-b-feedback-fails-to-brake-and-countersteer-due-to-vehicle-cutting-two-lanes-from-right-collision-risk.
+Video: [fsd-b-feedback-fails-to-brake-and-countersteer-due-to-vehicle-cutting-two-lanes-from-right-collision-risk](https://drive.google.com/file/d/1Du--F5YvW93g9_ZEB3DnqsUOe1tycWIf/view?usp=sharing)
+- Attempts to enter an opposing traffic lane. Misjudges difficult road markings. Head-on collision risk.
+Video: [fsd-b-feedback-attempts-to-enter-opposing-traffic-lane-misjudges-difficult-road-markings-head-on-collision-risk](https://drive.google.com/file/d/1whL-_gQLr0rc9S-FMjCM7BYDUeUNDzt9/view?usp=sharing)
+- Hesitation and zig-zag while performing left lane change.
+fsd-b-feedback-hesitation-and-zig-zag-while-performing-left-lane-change
+Video: [fsd-b-feedback-hesitation-and-zig-zag-while-performing-left-lane-change](https://drive.google.com/file/d/1M1FkQo_NDre-fx_DzCxUpNe3ieZNDyby/view?usp=sharing)
+- Multiple attempts to shift right in busy traffic. No reason to perform the lane change maneuver. No space either to perform safely without a turn indicator.
+Video: [fsd-b-feedback-several-attempts-to-shift-right-in-busy-traffic-no-reason-to-perform-the-maneuver](https://drive.google.com/file/d/1L99oI8zyOuMT295pOzzc75TRX0N3AOnA/view?usp=sharing)
 - Attempted to cross double-yellow into a truck with trailer. Head-on collision risk.
 Video: [fsd-b-feedback-attempted-to-cross-double-yellow-into-truck-with-trailer-head-on-collision-risk](https://drive.google.com/file/d/1CkdjyFe-edwnrGchm_EiUHrrWOgcM1WJ/view?usp=sharing)
 - Dangerous on-ramp highway merge. Crossed solid white line and yield sign.
