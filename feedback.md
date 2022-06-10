@@ -2,6 +2,18 @@
 
 Tesla vehicles are the safest passenger cars on the road. Examples of Tesla vehicles saving lives are endless. The following is a list of observations from edge cases, compiled in order to help accelerate (1) Autopilot's (FSD) learning rate, transition to (2) autonomous hands-free driving and (3) sustainable future.
 ## Version: FSD Beta v10.12.2 | 2022.12.3.20 | cfe1aeaefb6d
+- Attempts to shift into the right turn-only lane while going straight. Collision risk into a parked semi.
+Video: [fsd-b-feedback-attempts-to-shift-into-the-right-turn-only-lane-while-going-straight-collision-risk-into-a-parked-semi](https://drive.google.com/file/d/17P11FcyA3KjcfPhL29Hd1smqTD8oq1g0/view?usp=sharing)
+- Attempts to perform wrong direction (right) lane change prior to the (left) turn from the turn only lane, and vice versa.
+Video: [fsd-b-feedback-attempts-to-perform-wrong-direction-lane-change-right-prior-to-the-left-turn-from-turn-only-lane](https://drive.google.com/file/d/1o1TIv0CPfSrknVMma8Rnb9q0M_cF4Ut1/view?usp=sharing)
+- Attempts to shift into the right turn-only lane while going straight.
+Video: [fsd-b-feedback-attempts-to-shift-into-the-right-turn-only-lane-while-going-straight](https://drive.google.com/file/d/1bpo4QjUzPYidUp1SxEyhUGyQFLwa-PfR/view?usp=sharing)
+- Attempts random shifts into the right shoulder.
+Video: [fsd-b-feedback-attempts-random-shifts-into-the-right-shoulder](https://drive.google.com/file/d/1tvMhlFNK65S1r6SdWv0y5YJ6dgVMe7is/view?usp=sharing)
+- Attempts to turn left too early. Misjudges difficult road markings.
+Video: [fsd-b-feedback-attempts-to-turn-left-too-early-misjudges-difficult-road-markings](https://drive.google.com/file/d/14Keta-TdsEXvPwUzZebCGYctqM7G-FDr/view?usp=sharing)
+- Cyclical swerving (left / right) within the bounds of the lane. Not critical.
+Video: [fsd-b-feedback-cyclical-swerving-left-right-within-the-bounds-of-the-lane-not-critical](https://drive.google.com/file/d/1Apf2WZINLrB5fq6qZRTnEF5yb9_X78Do/view?usp=sharing)
 - Fails to react to engage brakes and countersteer due to aggressive vehicle cutting left two lanes from far right on-ramp. Collision risk. Wideangle blind spot. 
 fsd-b-feedback-fails-to-brake-and-countersteer-due-to-vehicle-cutting-two-lanes-from-right-collision-risk.
 Video: [fsd-b-feedback-fails-to-brake-and-countersteer-due-to-vehicle-cutting-two-lanes-from-right-collision-risk](https://drive.google.com/file/d/1Du--F5YvW93g9_ZEB3DnqsUOe1tycWIf/view?usp=sharing)
