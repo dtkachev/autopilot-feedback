@@ -2,6 +2,25 @@
 
 Tesla vehicles are the safest passenger cars on the road. Examples of Tesla vehicles saving lives are endless. The following is a list of observations from edge cases, compiled in order to help accelerate (1) Autopilot's (FSD) learning rate, transition to (2) autonomous hands-free driving and (3) sustainable future.
 ## Version: FSD Beta v10.12.2 | 2022.12.3.20 | cfe1aeaefb6d
+- Attempts to pass in the right turn only lane while going straight. Fails to (1) recognise right turn only lane (2) visualize in the UI and avoid attempting to pass in this turn only lane. Ticket guaranteed.
+Video: [fsd-b-feedback-attempts-to-pass-in-the-right-turn-only-lane-while-going-straight-fails-to-recognise-right-turn-only-lane-and-avoid-ticket-ticket-guaranteed](https://drive.google.com/file/d/16OjANnLJKm7v365hipZjrw1PpgOG6pOI/view?usp=sharing)
+- Fails to (1) recognise left turn only lane (2) visualise in the UI left turn only lane designation / road markings and (3) perform left-lane change maneuver before the start of solid white line marking.
+Video: [fsd-b-feedback-fails-to-recognise-left-turn-only-lane-perform-lane-change-in-advance](https://drive.google.com/file/d/1hzuhiv5loBRSHWjcgljUlarFM-M6JHeJ/view?usp=sharing)
+- Crossing double solid white lines (prohibited depending on the state). Initiated left lane change 30-60 feet sooner than "happy path" to avoid ticket / liability in the event of an accident.
+Video: [fsd-b-feedback-crossing-double-solid-white-lines-30-60-ft-too-early](https://drive.google.com/file/d/1dpcOVRYD88Skkpc1iym4yvz_vccTSvtl/view?usp=sharing)
+- Unjustified evasive left lane change maneuver and late braking - black SUV was out of the happy path / outside of the lane bounds. Good to be safe, but such late braking evasive maneuver can cause a collision with traffic.
+Video: [fsd-b-feedback-unjustified-evasive-left-lane-change-maneuver-and-late-braking-black-SUV-was-outside-of-lane-bounds](https://drive.google.com/file/d/10sa2593sOdYXYIrIC1M7bnz1n_lvr-z3/view?usp=sharing)
+- Yellow light intersection - crossed on a red light late. Not too comfortable - liability in the event of any accident. Notice the vehicle on the right anticipating and stopping.
+Video: [fsd-b-feedback-yellow-light-intersection-crossed-on-a-red-late](https://drive.google.com/file/d/1dNE1c44Q3uKLoyEKHHC_5W7GvCZhcsdJ/view?usp=sharing)
+- Zig-zag (hesitation) between lanes before a stop sign. 
+Video: [fsd-b-feedback-zig-zag-hesitation-between-lanes-before-stop-sign](https://drive.google.com/file/d/1dyZLdZhwMLKnjt-9o61KoP-o9w2-w5nz/view?usp=sharing)
+- Automatic FSD disengagement / panic - Take control immediately alert. Reason not clear - might be change of road surface to milled / profiled asphalt.
+Video: 
+[fsd-b-feedback-automatic-FSD-disengagement-panic-Take-control-immediately-alert-reason-not-clear-might-be-milled-asphalt](https://drive.google.com/file/d/1LCgv9EgTOM4zATuTaF7nq_pH2eyQwjAq/view?usp=sharing)
+- Both Cruise control and Automatic Emergency Braking are disabled for extended period in daylight. Reason not clear. Putting in park didn't resolve it, only full park with door lock.
+Video: [fsd-b-feedback-cruise-control-and-autopilot-disabled-for-extended-period-in-daylight-reason-not-clear](https://drive.google.com/file/d/1rUauB-DL9YWrmb5Mb-eZ_7Eu72SQD_vD/view?usp=sharing)
+- UI - Rearview side camera feeds fail to load in reverse. Loaded after gear shift and reverse reengagement.
+Video: [fsd-b-feedback-rearview-side-camera-feeds-fail-to-load-in-reverse](https://drive.google.com/file/d/1THpN4IaiyyNaIteJDdov70tz-QewQXMb/view?usp=sharing)
 - Attempts to shift into the right turn-only lane while going straight. Collision risk into a parked semi.
 Video: [fsd-b-feedback-attempts-to-shift-into-the-right-turn-only-lane-while-going-straight-collision-risk-into-a-parked-semi](https://drive.google.com/file/d/17P11FcyA3KjcfPhL29Hd1smqTD8oq1g0/view?usp=sharing)
 - Attempts to perform wrong direction (right) lane change prior to the (left) turn from the turn only lane, and vice versa.
